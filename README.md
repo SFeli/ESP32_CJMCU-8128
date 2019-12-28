@@ -8,7 +8,8 @@ Air Quality with CJMCU-8128 (board with CCS811 / BMP280 and SI702x)
 
 ## Hardware:
 1) ESP32 (with I²C  4MB and WIFI)
-2) CJMCU-8128 - Sensor                   
+2) CJMCU-8128 - Sensor
+    More information about the Core-Sensor CCS811 from AMS can be found under: https://ams.com/environmental-sensors
 
 ## Wireing:
 
