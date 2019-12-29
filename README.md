@@ -7,12 +7,16 @@ Air Quality with CJMCU-8128 (board with CCS811 / BMP280 and SI702x)
 - Pressure (measured by BMP280)
 
 ## Hardware:
-1) ESP32 (with I²C  4MB and WIFI)
+1) ESP32 (with I²C, 4MB and WIFI)
 2) CJMCU-8128 - Sensor
     More information about the Core-Sensor CCS811 from AMS can be found under: https://ams.com/environmental-sensors
+    
+## Software / Libraries:
+- CCS881 - library from maarten-pennings https://github.com/maarten-pennings/CCS811
+- BMP280 - standard library from Adafruit
+- Si702x - standard library from Adafruit
 
 ## Wireing:
-
 | MH-Z19b |   |    ESP32  |
 | --- | -- | -----------|
 | VCC  | <-> | 3V3 |
@@ -22,5 +26,5 @@ Air Quality with CJMCU-8128 (board with CCS811 / BMP280 and SI702x)
 | WAK   | <-> | GND |
 
 ## Implementation
-- Code is raw without any additional features
+- Code is raw without any additional features in Arduino 1.8.10
 - Output on serial monitor 9600 Baud
