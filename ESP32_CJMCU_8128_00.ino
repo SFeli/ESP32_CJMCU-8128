@@ -48,7 +48,7 @@ Adafruit_Si7021 SI702x = Adafruit_Si7021();
 void setup() {
   Serial.begin(9600);
   // Enable I2C
-  Wire.begin();
+  Wire.begin(21,22);                  // make TTGO boards run with this code
   Serial.println("CCS811 test");      /* --- SETUP CCS811 on 0x5A ------ */
   ccs811.set_i2cdelay(50); // Needed for ESP8266 because it doesn't handle I2C clock stretch correctly
   if (!ccs811.begin()) {
