@@ -46,9 +46,10 @@ Adafruit_BMP280 bmp280;                // I2C
 Adafruit_Si7021 SI702x = Adafruit_Si7021();
 
 void setup() {
-  Serial.begin(9600);
+//  Serial.begin(9600);
+  Serial.begin();
   // Enable I2C
-  Wire.begin(21,22);                  // make TTGO boards run with this code
+  Wire.begin(21,22);                  // put here the Pins of I2C
   Serial.println("CCS811 test");      /* --- SETUP CCS811 on 0x5A ------ */
   ccs811.set_i2cdelay(50); // Needed for ESP8266 because it doesn't handle I2C clock stretch correctly
   if (!ccs811.begin()) {
@@ -103,10 +104,6 @@ void loop() {
   Serial.print("Pressure = ");
   Serial.print(bmp280.readPressure() / 100);
   Serial.println(" Pa, ");
-
-  //  Serial.print("Approx altitude = ");
-  //  Serial.print(bmp280.readAltitude(1013.25));        /* Adjusted to local forecast! */
-  //  Serial.println(" m");
 
   Serial.print("SI702x => Temperature = ");
   Serial.print(SI702x.readTemperature(), 2);
